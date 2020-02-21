@@ -4,24 +4,24 @@
 	"require" : {
 		"php" : "^7.2"
 	},
-	"type": "library",
-    "keywords": [
-        "rss",
-        "generator",
-        "writer",
-        "feed"
-    ],
-    "homepage": "https://github.com/bhaktaraz/php-rss-generator",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Nirapon Pothiin",
-            "email": "benzz3d@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Bhaktaraz\\RSSGenerator\\": "Source/Bhaktaraz/RSSGenerator/"
-        }
-    }
+	"type" : "library",
+	"keywords" : [
+		"rss",
+		"rss generator",
+		"rss writer",
+		"rss reader",
+		"feed"
+	],
+	"homepage" : "https://github.com/benz3d/php-rss-feed",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Nirapon Pothiin",
+			"email" : "benzz3d@gmail.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Benz3d\\RSS\\" : "src/"
+		}
+	}
 }
