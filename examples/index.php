@@ -1,4 +1,5 @@
 <?php
+//Example
 use Benz3d\RSS\Feed\Feed;
 use Benz3d\RSS\Channel\Channel;
 use Benz3d\RSS\Item\Item;

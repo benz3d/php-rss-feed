@@ -1,7 +1,27 @@
 {
-    "name": "benz3d/php-rss-feed",
-    "description": "The Read/Write Rss Feed in PHP",
-    "require": {
-        "php": "^7.2"
+	"name" : "benz3d/php-rss-feed",
+	"description" : "The Read/Write Rss Feed in PHP",
+	"require" : {
+		"php" : "^7.2"
+	},
+	"type": "library",
+    "keywords": [
+        "rss",
+        "generator",
+        "writer",
+        "feed"
+    ],
+    "homepage": "https://github.com/bhaktaraz/php-rss-generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nirapon Pothiin",
+            "email": "benzz3d@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bhaktaraz\\RSSGenerator\\": "Source/Bhaktaraz/RSSGenerator/"
+        }
     }
 }
