@@ -2,7 +2,7 @@
 	"name" : "benz3d/php-rss-feed",
 	"description" : "The Read/Write Rss Feed in PHP",
 	"require" : {
-		"php" : "^7.2"
+		"php" : "^5.4"
 	},
 	"type" : "library",
 	"keywords" : [
