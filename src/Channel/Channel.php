@@ -22,6 +22,7 @@ class Channel implements ChannelInterface{
     protected $docs;
     protected $category;
     protected $items = [];
+    protected $atomLink;
     
     public function __construct($title,$description,$link){
         $this->title = $title;
@@ -146,6 +147,11 @@ class Channel implements ChannelInterface{
         $this->category = $category;
         return $this;
     }
+    
+    public function atomLink($link){
+        $this->atomLink = $link;
+        return $this;
+    }
 
     public function addItem(ItemInterface $item)
     {
@@ -158,6 +164,13 @@ class Channel implements ChannelInterface{
         $xml = new \XMLWriter();
         $xml->openMemory();
         $xml->startElement('channel');
+        if(isset($this->atomLink)){
+            $xml->startElement('atom:link');
+            $xml->writeAttribute('href', $this->atomLink);
+            $xml->writeAttribute('rel', 'self');
+            $xml->writeAttribute('type', 'application/rss+xml');
+            $xml->endElement();
+        }
         $xml->writeElement('title',$this->title);
         $xml->writeElement('description',$this->description);
         $xml->writeElement('link',$this->link);

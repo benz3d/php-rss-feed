@@ -23,13 +23,13 @@ class Feed implements FeedInterface {
         $xml->startDocument($this->xmlVersion,$this->encoding);
         $xml->startElement('rss');
             $xml->writeAttribute('version', $this->rssVersion);
+            $xml->writeAttribute('xmlns:atom', 'https://www.w3.org/2005/Atom');
             if (!empty($this->channels)) {
                 foreach ($this->channels as $channel) {
                     $xml->writeRaw($channel->toXML());
                 }
             }
         $xml->endElement();//end rss
-        $xml->endElement();
         
         $xml->endDocument();
         return $xml->outputMemory();

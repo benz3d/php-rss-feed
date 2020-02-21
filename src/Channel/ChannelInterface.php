@@ -120,6 +120,8 @@ interface ChannelInterface {
      */
     public function webMaster($email);
     
+    public function atomLink($link);
+    
     /**
      * Add an item to channel
      * @param ItemInterface $item
@@ -127,7 +129,7 @@ interface ChannelInterface {
     public function addItem(ItemInterface $item);
     
     /**
-     * Output as XML
+     * Output as XML string
      */
     public function toXML();
     
